@@ -1,0 +1,57 @@
+
+---
+
+## `frontend/index.html`
+```html
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Team Capacity</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+
+  <body>
+    <div class="page">
+      <header class="header">
+        <div class="header__left">
+          <div class="title">Team Capacity</div>
+          <div id="updated" class="updated">Updated —</div>
+          <div id="summary" class="summary">WIP — • Queue — • Overdue — • Blocked —</div>
+        </div>
+
+        <div class="header__right">
+          <div class="controls">
+            <div class="control">
+              <label for="projectSelect">Project</label>
+              <select id="projectSelect"></select>
+            </div>
+
+            <div class="control">
+              <label for="deptSelect">Department</label>
+              <select id="deptSelect"></select>
+            </div>
+
+            <div class="control control--search">
+              <label for="searchInput">Search</label>
+              <div class="search">
+                <span class="search__icon">🔍</span>
+                <input id="searchInput" placeholder="Search teammate..." />
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <div class="card">
+        <div id="rows" class="rows"></div>
+      </div>
+    </div>
+
+    <div id="popover" class="popover" aria-hidden="true"></div>
+    <div id="toast" class="toast" aria-hidden="true"></div>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
